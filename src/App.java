@@ -4,7 +4,7 @@ public class App {
 
     public static void main(String[] args) {
         // Number of threads
-        int numberOfThreads = 100;
+        int numberOfThreads = 200;
 
         // Number of increments per thread
         int incrementsPerThread = 1000;
@@ -42,6 +42,9 @@ public class App {
             for (int i = 0; i < increments; i++) {
                 counter++;
             }
+        }
+        private synchronized void incrementCounter() {
+            counter++;
         }
     }
 }
